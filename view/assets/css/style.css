@@ -1,0 +1,1574 @@
+
+
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --naranja:#FFBD66;
+    --morado:#2D1E2F;
+    --blanco:#FCFCFC;
+    --celeste: #2EE8E8;
+    --gris:#BEBFC5;
+}
+
+
+body{
+    background-color:var(--naranja);
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+ 
+}
+
+main{
+    margin: 70px auto;
+    padding-top: 10px;
+    background-color: var(--blanco);
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0%;
+    background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+    min-height: 60vh;
+
+    
+
+}
+
+/* main en diseño desktop */
+
+@media (min-width:800px){
+    /* main{
+        margin: 30px auto;
+    } */
+}
+
+a{
+    text-decoration: none;
+}
+
+button:hover{
+    background-color: var(--blanco);
+    color: var(--morado);
+}
+
+footer{
+
+    width: 100vw;
+    display: flex;
+    background-color: var(--morado);
+    color: var(--blanco);
+    padding: 20px;
+}
+
+footer>div:first-child{
+    padding-right: 5px;
+}
+
+@media (min-width:600px){
+
+    footer>div:first-child{
+        padding-right: 150px;
+    }
+
+ 
+}
+
+
+
+/*------------------MENÚ HAMBURGUESA------------------>*/
+
+
+.menuHamburguesa{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2px;
+    background-color: var(--morado);
+    border-radius: 4px;
+    z-index: 5;
+}
+
+.menuHamburguesa span{
+    margin: auto;
+    width:70%;
+    height: 2px;
+    background-color: var(--blanco);
+    transition: all;
+    transition-duration: 0.5s;
+    
+}
+
+.menuHamburguesa{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+   
+}
+
+.menuHamburguesa:hover{
+    cursor: pointer;
+    background-color: var(--gris);
+}
+
+
+
+.esconderBarraNavegacion{
+    transform: translateX(+100%);
+}
+
+
+/* transiciones para las lineas horizaontales del menú hamburguesa */
+.linea3 {
+    transform: translateY(-11px) rotateZ(-45deg);
+    
+}
+
+.linea2{
+    opacity: 0;
+   
+}
+
+.linea1 {
+    transform: translateY(13px) rotateZ(45deg);
+   
+}
+
+
+
+/* <-----------------BARRA NAVEGACIÓN------------------> */
+
+header{
+    position: absolute;
+    top: 0%;
+    z-index: 4;
+    width: 100vw;
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+    transform: translateX(0%);
+    background-color: var(--naranja);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(233,960,476)'%3E%3Cstop offset='0' stop-color='%23FFBD66'/%3E%3Cstop offset='1' stop-color='%232EE8E8'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='300' height='250' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.06'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    color: var(--morado);
+    box-shadow: 4px 3px 10px  black;
+}
+
+header>div{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ 
+}
+
+header>div>img{
+    width: 80pt;
+    order: 2;
+   
+}
+
+
+header>div>a{
+    order: 1;
+    font-family: 'Pokemon Solid', sans-serif;
+    color: var(--morado);
+}
+
+header>div>a:hover{
+    color: var(--blanco);
+}
+
+
+header ul{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    list-style-type: none;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+   
+}
+
+
+header ul>li:last-child{
+   position: relative;
+   
+}
+
+header ul>li>a{
+    width: 100%;
+    display: block;
+    transition: 0.3s;
+    text-decoration: none;
+    color: var(--morado);
+
+}
+
+.iconoImagenUsuario>i{
+    display: none;
+}
+
+
+header ul>li>a:hover{
+    background-color: white;
+    color: black;
+
+}
+
+header .submenu{
+    position: relative;
+   
+}
+
+.imagenUsuario{
+    padding: 0%;
+}
+
+.imagenUsuario:hover{
+    background-color: transparent;
+    cursor: default;
+
+}
+
+
+
+
+
+@media (min-width:800px){
+    
+    /* <-----------------BARRA NAVEGACIÓN------------------> */
+
+    header{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+       padding: 0px 10px 0px 10px;
+      
+    
+    }
+
+    header>div{
+        display: flex;
+        flex-direction: row;
+    }
+
+    header>div>img{
+        order: 1;
+        margin-right: 3px;
+        width: 5vw;
+
+    }
+
+    header>div>h2{
+        order: 2;
+    }
+
+    header>nav>ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    
+    }
+
+    header>nav>ul>li{
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+     
+    }
+
+    header ul>li>a{
+        padding:30px 20px;
+        font-size:1vw;
+
+    }
+ 
+    header ul>li>a:hover{
+        background-color: white;
+        color: black;
+
+    }
+
+
+    .menuHamburguesa,#inputMenuHamburguesa{
+        z-index: 1;
+    }
+
+
+    header>nav>ul>li:last-child:hover >.submenu{
+        display: block;
+    }
+
+    header .submenu{
+        position: absolute;
+        left: 0%;
+        top: 100%;
+        background-color: var(--gris);
+        display: none;
+        
+    }
+
+    .iconoImagenUsuario{
+        padding: 22px;
+        padding-right: 50px;
+        width: 2vw;
+    }
+
+    .iconoImagenUsuario:hover{
+        background-color: transparent;
+    }
+
+
+    .iconoImagenUsuario>i{
+        color: var(--morado);
+        display: block;
+       
+      
+    }
+
+
+
+}
+
+
+
+/*<--------------MAIN PÁG POKEMONS-------------->*/
+
+.contenedorPokemons{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-auto-rows: 1fr;
+    margin: auto;
+    width: 70%;
+    gap: 15px;
+   
+}
+
+.contenedorPokemons h4,.contenedorPokemons h5{
+    color: var(--morado);
+}
+
+
+.fichaPokemon{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 15px;
+    transition: all 0.5s;
+   
+}
+
+
+.iconoTarjetaPokemon,.fichapokemonfavorito{
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+}
+
+
+
+
+.iconoTarjetaPokemon{
+    color: var(--gris);
+
+}
+
+.fichapokemonfavorito{
+    color: red;
+}
+
+.contenedorPokemons div>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.nombrePokemon{
+    font-size: 4vw;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.tipoPokemon{
+    font-size: 3.5vw;
+    border-radius: 4px;
+    margin-bottom: 3px;
+}
+
+
+.fichaPokemon:hover{
+    transform: scale(1.1);
+}
+
+.imagenPokemon{
+    width: 28vw;
+}
+
+.containerCarousel{
+    display: none;
+}
+
+.botonVerMasPokemons{
+    background-color: var(--morado);
+    color: var(--blanco);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.contenedorBuscadorPrincipal{
+    margin-bottom: 10px;
+   
+}
+
+.contenedorBuscadorPrincipal2{
+    width:200px ;
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+
+}
+
+.contenedorBuscadorPrincipal2>li>input{
+    width: 100%;
+   
+}
+
+.buscadorPrincipal:focus{
+    background-color: #2D1E2F;
+    color: var(--blanco);
+}
+
+.botonLupa{
+    width: 10%;
+    position: relative;
+    bottom: 27px;
+    left: 90%;
+    padding-top: 2px;
+    padding-left:2px ;
+   
+
+}
+
+.botonLupa,.botonFiltroBusqueda{
+    background-color: var(--morado);
+    color: var(--blanco);
+    border-radius: 4px;
+    
+}
+
+.botonFiltroBusqueda{
+    position: relative;
+    padding: 2px;
+    bottom: 10px;
+  
+}
+
+.botonFiltroBusqueda>i{
+   transition: transform 0.3s ease;
+}
+
+.iconoBotonFilters{
+    transform: rotateY(180deg);
+   
+}
+
+
+.filtroBusqueda{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+    background-color: var(--gris);
+    transition:transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transform: translateX(-100%);
+    background-color: var(--naranja);
+}
+
+.visualizarFiltroBusqueda{
+    transform: translateX(0%);
+   
+}
+
+
+.filtroBusqueda hr{
+    margin: 5px auto;
+    width: 90%;
+}
+
+#listaBusqueda{
+    position: absolute;
+    z-index: 2;
+    margin: 0%;
+    padding: 0%;
+    background-color: var(--gris);
+    color: var(--morado);
+    width: 190px;
+    list-style: none;
+   
+    
+}
+
+#listaBusqueda>li{
+    margin: 0%;
+    padding: 0%;
+    cursor: pointer;
+}
+
+#listaBusqueda>li:hover{
+    background-color: var(--morado);
+    color: var(--blanco);
+}
+
+
+
+@media (min-width:600px){
+ 
+    .contenedorPokemons{
+        width: 85%;
+        margin: 20px auto;
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+
+
+    .nombrePokemon{
+        font-size: 1.7vw;
+        margin-bottom: 5px;
+    }
+    
+
+    .tipoPokemon{
+        font-size: 1.5vw;
+       
+    }
+
+    .imagenPokemon{
+        width: 15vw;
+    }
+
+}
+
+
+@media (min-width:1000px){
+  
+    .contenedorPokemons{
+        grid-template-columns: repeat(4,1fr);
+        
+    }
+
+    .fichaPokemon i{
+        font-size: 30pt;
+    }
+    
+    .nombrePokemon{
+        font-size: 1.2vw;
+        margin-bottom: 5px;
+    }
+    
+
+    .tipoPokemon{
+        font-size: 1vw;
+       
+    }
+
+
+    .imagenPokemon{
+        width: 10vw;
+        max-height: 20vh;
+        min-height: 20vh;
+    }
+
+    .contenedorPokemons div>div{
+        padding-left: 5%;
+    }
+
+
+
+    #carouselExampleCaptions{
+        position: relative;
+    
+    }
+    
+    #carouselExampleCaptions .carousel-indicators{
+        position: absolute;
+        bottom: -18%;
+    }
+    
+    #carouselExampleCaptions button{
+       background-color: var(--morado);
+       height: 4px;
+    }
+    
+    .containerCarousel{
+        display: block;
+        margin: auto;
+        background-color: var(--celeste);
+        padding: 7px;
+        width: 50%;
+        margin-bottom: 30px;
+    
+    }
+    
+    .carousel ,.carousel img{
+        margin: auto;
+        width: 450px;
+        height: 252px;
+    }
+
+    .botonFiltroBusqueda{
+        position: relative;
+        padding: 2px;
+        right: auto;
+        left: 110%;
+        bottom:55px;
+
+    }
+  
+}
+
+
+    /* <--------------PÁG DETALLES POKEMON ------------------->*/
+
+
+    .contenedorDatosPokemon{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding:5px 50px 5px 50px;
+     
+    }
+
+    .contenedorDatosPokemon>div>h3{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 4vw;
+        font-weight: bold;
+    }
+
+
+    .contenedorImagenPokemon{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+      
+    }
+    .contenedorImagenPokemon>img{
+        width: 60%;
+     
+    }
+
+
+    /*contenedor datos pokemon*/
+    .datosPokemon{
+        padding-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        background-color: var(--celeste);
+        border: 2px solid var(--morado);
+        border-radius: 10px;
+    }
+
+
+    .datosPokemon>div>h6:first-child{
+        font-size: 3vw;
+    }
+    .datosPokemon h6{
+        text-align: center;
+        font-weight: bold;
+        font-size: 2.5vw;
+    }
+
+
+   
+    .contenedorFrases p{
+        text-align: justify;
+        font-size: 3vw;
+    }
+
+
+    /*contendor estadisticas pokemon*/
+
+    .estadisticas{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--celeste);   
+        border: 2px solid var(--morado);
+        border-radius: 10px;
+        height: 300px;
+        padding: 0px 10px 0px 10px;
+        gap: 5px;
+    }
+
+    .estadisticas>div{
+       
+        display: grid; 
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 7fr 1fr; 
+        height: 100%;
+        padding-top: 10px;
+        width: 16%;
+    }
+ 
+
+
+    .estadisticas>div>p{
+       font-size: 3vw;
+       font-weight: bold;
+       text-align: center;
+      
+    }
+
+    .estadisticas>div>p:last-child{
+        padding-top: 12px;
+    }
+
+    .estadisticas>div>div{
+        margin-bottom: 10px;
+        background-color: var(--naranja);
+        
+    }
+
+
+    /*contenedor pokemon shiny*/
+    .contenedorPokemonShiny{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .contenedorPokemonShiny>div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3px;
+        background-color: var(--celeste);
+        border: 2px solid var(--morado);
+        border-radius: 10px;
+      
+        
+    }
+
+    .contenedorPokemonShiny>div> h3{
+        font-size: 3vw;
+        font-weight: bold;
+    }
+  
+    .contenedorPokemonShiny>img{
+        margin-left: 15%;
+        width: 60%;
+    }
+
+
+    @media  (min-width:800px){
+   
+        .contenedorDatosPokemon{
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(6,1fr);
+            padding:auto;
+            
+        }
+        
+
+        .contenedorDatosPokemon>div>h3{
+            margin-top: 2%;
+            margin-bottom: 2%;
+            font-size: 20pt;
+           
+        }
+    
+        .contenedorImagenPokemon>img{
+            width: 60%;
+         
+        }
+    
+    
+        /*contenedor datos pokemon*/
+ 
+        .datosPokemon>div>h6:first-child{
+            font-size: 1.3vw;
+        }
+        .datosPokemon h6{
+            font-size: 1.1vw;
+        }
+    
+        .contenedorFrases p{
+            font-size: 10pt;
+        }
+    
+    
+    /*contenedor estadisticas pokemon*/
+
+        .estadisticas{
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: stretch;
+            padding: 5px;
+            border-radius: 10px;
+            height: auto;
+        }
+
+
+
+        .estadisticas>div{
+            display: grid;
+            grid-template-columns: 0.10fr 1fr 0.10fr;
+            grid-template-rows: 1fr;
+            width: 100%;
+            gap: 15px;
+            
+        }
+
+        .estadisticas>div>p{
+            font-size: 12pt;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            
+        }
+
+        .estadisticas>div>div{
+            background-color: var(--naranja);
+            margin-top: 0%;
+            height: 60%;
+                   
+        }
+    
+    
+        /*contenedor pokemon shiny*/
+        .contenedorPokemonShiny>div> h3{
+            font-size: 20pt;
+        }
+      
+        .contenedorPokemonShiny>img{
+            width: 25%;
+        }
+
+
+    /*posicionamiento de los cuadros de datos*/
+        .contenedorImagenPokemon{
+            grid-column: 1/2;
+            grid-row: 1/3;
+        }
+
+        .contenedorEspecifiaciones{
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+
+        .contenedorFrases{
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+
+        .contenedorEstadisticas{
+            grid-column: 1/3;
+            grid-row: 3/5;
+        }
+
+        .contenedorPokemonShiny{
+            grid-column: 1/3;
+            grid-row: 5/7;
+        }
+
+    }
+
+
+    /* <---------------------PAG REGISTER AND LOGIN----------------------------------->*/
+
+
+    .esconder{
+        display: none;
+       
+    }
+
+    .contenedorLogin{
+        width: 80vw;
+        height: 90vh;
+    }
+
+    .contenedorRegistro{
+        margin-bottom: 40px;
+    }
+
+    .contenedorLogin,.contenedorRegistro{
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        background-image: none;
+        margin-top: auto;
+        margin-top: 40px;
+        box-shadow: 2px 2px 4px var(--morado);
+        border-radius: 10px;
+        background: linear-gradient(135deg, #FFDD57, #FF4949, #2E3192, #3BB4F2);
+        background-size: 300% 300%;
+        animation: gradientAnimation 10s ease infinite;
+        text-align: center;
+
+    }
+
+    .contenedorLogin h2,.contenedorRegistro h2 {
+        font-family: 'Pokemon Solid', sans-serif;
+        font-size: 10vw;
+    }
+
+    .contenedorLogin h3,.contenedorRegistro h3{
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    .contenedorLogin >section p,.contenedorRegistro>section p{
+        font-size: 10pt;
+    }
+
+    .contenedorLogin>section p>a,.contenedorRegistro>section p>a{
+        color: red;
+        text-decoration: underline;
+    }
+
+    .contenedorLogin>section>form>p>input:focus,.contenedorRegistro>section>form>p>input:focus{
+        background-color: var(--gris);
+    }
+
+    .contenedorLogin>section>p>a:hover,.contenedorRegistro>section>p>a:hover{
+        color: var(--morado);
+    }
+
+    .contenedorLogin>section{
+        height: 50vh;
+    }
+ 
+
+    .contenedorLogin>section,.contenedorRegistro>section{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+
+    }
+
+    .contenedorLogin>section>form,.contenedorRegistro>section>form{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+    }
+
+    .contenedorLogin>section>form>label,.contenedorRegistro>section>form>label{
+        align-self: flex-start;
+    }
+
+    .contenedorLogin>section>form>p,.contenedorLogin>section>form>p>input,.contenedorRegistro>section>form>p,.contenedorRegistro>section>form>p>input{
+        width: 100%;
+
+    }
+
+    .contenedorLogin>section>form>input,.contenedorRegistro>section>form>input{
+        width: 90%;
+        border-radius: 5px;
+        background-color: var(--morado);
+        color: var(--blanco);
+    }
+
+    .contenedorLogin>section>form>input:hover,.contenedorRegistro>section>form>input:hover{
+        background-color: var(--blanco);
+        color: var(--morado);
+    }
+
+    .contenedorLogin img,.contenedorRegistro img{
+        width: 50%;
+    }
+
+    /*input tlf2*/
+    #addTlf2{
+        background-color: var(--morado);
+        color: var(--blanco);
+        padding: 2px 5px 2px 5px;
+        border-radius: 4px;
+        align-self: flex-end;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    
+    #addTlf2:hover{
+        background-color: var(--blanco);
+        color: var(--morado);
+    }
+    
+
+    @media  (min-width:800px){
+
+        
+
+        .contenedorRegistro{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-bottom: 0px;
+            margin-top: 100px;
+        }
+
+        .contenedorLogin,.contenedorRegistro{
+            display: flex;
+            flex-direction: row;
+           
+          }
+
+          .contenedorLogin>section>form,.contenedorRegistro>section>form{
+
+            width: 50%;
+          }
+      
+          .contenedorLogin h2,.contenedorRegistro h2{
+              font-size: 5vw;
+          }
+      
+          .contenedorLogin>section>form>p,.contenedorLogin>section>form>p>input,.contenedorRegistro>section>form>p,.contenedorRegistro>section>form>p>input{
+              width: 100%;
+      
+          }
+      
+          .contenedorLogin>section>form>input,.contenedorRegistro>section>form>input{
+              width: 90%;
+              border-radius: 5px;
+              background-color: var(--morado);
+              color: var(--blanco);
+          }
+      
+          .contenedorLogin>section>form>input:hover,.contenedorRegistro>section>form>input:hover{
+              background-color: var(--blanco);
+              color: var(--morado);
+          }
+      
+          .contenedorLogin img,.contenedorRegistro img{
+              width: 50%;
+          }
+
+    }
+
+    /* <-------------------PAG EDIT USUARIO-----------------------> */
+
+    .contenedorEditarUsuario{
+        color: var(--morado);
+        width: 100%;
+        padding: 5% 10%;
+        position: relative;
+    
+
+    }
+
+    .contenedorEditarUsuario>form{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    /*tiulos formualrios*/
+    .contenedorEditarUsuario h5{
+        font-size: 4vw;
+    }
+
+    /*mensajes error*/
+    .contenedorEditarUsuario h6{
+        text-align: center;
+       
+    }
+
+
+    .contenedorEditarUsuario>form>p{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 10px;
+  
+        
+    }
+
+
+    .contenedorEditarUsuario>form label{
+        text-align: center;
+        font-size: 3vw;
+        
+    }
+
+
+    .contenedorEditarUsuario>form>p input{
+        font-size: 3vw;
+        background-color: var(--gris);
+        border-radius: 5px;
+        width: 100%;
+    }
+
+
+
+    .contenedorEditarUsuario>form input[type=submit]{
+       align-self: flex-end;
+        background-color:var(--morado);
+        color: var(--blanco);
+        padding: 2px 10px;
+        font-size: 3vw;
+    }
+
+    .contenedorEditarUsuario>form input[type=file]{
+        width:100%;
+    }
+
+    .contenedorEditarUsuario hr{
+        height: 5px;
+
+    }
+
+
+
+    @media (min-width:900px){
+
+        .contenedorEditarUsuario{
+            padding: 2% 5%;
+            width: 80%;
+        
+        }
+
+
+        .contenedorEditarUsuario h5{
+          font-size: 1.5vw;
+          padding-bottom: 20px;
+        }
+
+
+        .botonActualizarImagen{
+            font-size: 25pt;
+            padding: 5px ;
+        }
+
+
+        .contenedorEditarUsuario>form>p{
+
+            width: 100%;
+        }
+
+        .contenedorEditarUsuario>form label{
+            font-size: 15pt;
+            
+        }
+    
+        .contenedorEditarUsuario>form>p input{
+            font-size: 15pt;
+            
+        }
+
+        .contenedorEditarUsuario>form input[type=file]{
+           font-size: 1vw;
+        }
+
+        .contenedorEditarUsuario>form input[type=submit]{
+            font-size: 1.5vw;
+        }
+
+    }
+
+    /*<----------------------PÁG FORO HILOS------------------------------>*/
+
+        .tituloContenedorForo{
+            font-size: 3vw;
+            margin-top: 80px;
+            margin-bottom: 60px;
+            text-align: center;
+            color: var(--morado);
+        }
+    
+    
+        .contenedorHilosForo{
+            
+            margin: auto;
+            margin-bottom: 240px;
+            width: 90vw;
+            display: flex;
+            flex-direction: column;
+            font-size: 2.5vw;
+            
+           
+          
+        }
+    
+        .contenedorHilosForo>div{
+            padding: 5px 10px;
+             display: grid;
+          
+             align-items:center ;
+             border-bottom: 2px solid black;
+             background-color: var(--blanco);
+             background: linear-gradient(135deg, #FFDD57, #FF4949, #2E3192, #3BB4F2);
+             background-size: 300% 300%;
+             animation: gradientAnimation 10s ease infinite;
+     
+         }
+
+         .hiloCliente{
+            grid-template-columns: 3fr 1fr 1fr;
+           
+        }
+
+        .hiloAdministrador{
+            grid-template-columns: 3fr 1fr 1fr 1fr 2fr;
+            text-align: right;
+            
+        }
+
+     
+        .contenedorHilosForo>div input{
+            width: 100%;
+        
+        }
+    
+        .contenedorNumCommentarios{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           
+        }
+    
+        /*contenedor boton*/
+    
+        .contenedorHilosForo>div>div{
+            display: flex;
+            justify-content: center;
+          
+        }
+    
+
+        .contenedorHilosForo a{
+            display: block;
+      
+        }
+    
+        .contenedorHilosForo button, .contenedorHilosForo a{
+            background-color: var(--morado);
+            color: var(--blanco);
+            border :none;
+            border-radius: 5px;
+            padding: 2px;
+            border: 2px solid black;
+        }
+    
+        .contenedorHilosForo button:hover, .contenedorHilosForo a:hover{
+            background-color: var(--blanco);
+            color: var(--morado);
+        }
+
+        #contenedorCrearHilos{
+            align-self: flex-end;
+           display: flex;
+           width: 60%;
+            justify-content: space-between;
+           background-color: transparent;
+           border: none;
+            
+        }
+
+        #contenedorCrearHilos>input{
+            width: 60%;
+           
+        }
+
+        @media (min-width:900px){
+      
+            .contenedorHilosForo{
+            
+                margin: auto;
+                margin-bottom: 200px;
+                width: 60vw;
+                display: flex;
+                flex-direction: column;
+                font-size: 1.5vw;
+              
+              
+            }
+
+
+        }
+
+/*<------------------------PÁG VISUALIZAR COMENTARIOS------------------------------------------->*/
+
+.contenedorComentarios{
+   
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.contenedorComentario{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 20px;
+    border: 2px solid var(--morado);
+    background-color: var(--blanco);
+    background: linear-gradient(135deg, #FFDD57, #FF4949, #2E3192, #3BB4F2);
+    background-size: 300% 300%;
+    border-radius: 20px;
+
+}
+
+.contenedorContenidoComentario div{
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+   
+}
+
+
+.contenedorContenidoComentario div i{
+    margin-right: 10px;
+   
+}
+
+.comentarioPuntuado{
+    color: var(--blanco);
+}
+
+.contenedorContenidoComentario div h5{
+    margin-top: 10px;
+}
+
+.contenedorComentario img{
+    width: 30vw;
+}
+
+.contenedorDatosUsuarioComentario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.contenedorContenidoComentario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: justify;
+   
+
+}
+
+.contenedorContenidoComentario p{
+    overflow-wrap: break-word;
+}
+
+
+.contenedorContenidoComentario i{
+    font-size:30pt;
+    cursor: pointer;
+}
+
+
+
+.contenedorDatosUsuarioComentario i{
+    font-size: 70pt;
+}
+
+.contenedorComentarioNuevo{
+    display: flex;
+    flex-direction: column;
+    width:60% ;
+    height: 120px;
+    margin-top: 25px;
+
+}
+
+.contenedorComentarioNuevo input[type=text]{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.contenedorComentarioNuevo button{
+    align-self: flex-end;
+    color: var(--blanco);
+    background-color: var(--morado);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.contenedorComentarioNuevo button:hover{
+    background-color:  var(--blanco);
+    color: var(--morado);
+}
+
+@media(min-width:900px){
+    .contenedorComentario{
+        flex-direction: row;
+        width: 60%;
+    }
+
+    .contenedorCmentario>div:first-child{
+        width: 20%;
+    }
+
+    .contenedorComentario>div:nth-child(2){
+        width: 80%;
+       
+    }
+
+    .contenedorComentario img{
+        width: 8vw;
+    }
+
+    .contenedorDatosUsuarioComentario>i{
+        font-size: 8vw;
+    }
+
+    
+    .contenedorDatosUsuarioComentario{
+        margin-right: 30px;
+    }
+
+}
+
+/*<--------------------------PÁG  COMENTARIOS USUARIO--------------------->*/
+
+.contenedorComentarioEditar{
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+  
+}
+
+.contenedorComentarioEditar textarea{
+    width: 100%;
+    height: auto; 
+    resize: none; 
+    overflow: hidden; 
+}
+
+.contenedorComentarioEditar>div:first-child{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 5px 20px;
+    border: 2px solid var(--morado);
+    background-color: var(--blanco);
+    background: linear-gradient(135deg, #FFDD57, #FF4949, #2E3192, #3BB4F2);
+    background-size: 300% 300%;
+    border-radius: 20px;
+
+
+}
+
+
+.contenedorComentarioEditar p{
+    margin-top: 10px;
+    align-self: flex-end;
+    font-weight: bold;
+}
+
+.contenedorComentarioEditar div:nth-child(2){
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+
+.contenedorComentarioEditar div:nth-child(2)>button:first-child{
+    margin-right: 5px;
+}
+
+button{
+    padding: 10px;
+    background-color: var(--morado);
+    color: var(--blanco);
+    border-radius: 5px;
+}
+
+
+@media(min-width:900px){
+    
+    .contenedorComentarioEditar{
+        width: 60%;
+    }
+}
+
+/*<------------------------------------PÁG POKEMON DÍA------------------------------------------------------>*/
+
+.tituloPokemonDia{
+
+    text-align: center;
+}
+
+main>.imagenPokemonDia{
+    width: 80%;
+}
+
+@media(min-width:900px){
+    main>.imagenPokemonDia{
+        width: 40%;
+    }  
+}
+
+
+/*<--------------------------------PESTAÑA ACEPTAR COOKIES---------------------------------------------->*/
+
+
+.fondoPestañaCookie{
+    position: absolute;
+    z-index: 20;
+    top: 0%;
+    width: 100vw;
+    height: 500%;
+    background-color: rgba(117, 103, 103,0.5);
+   
+}
+
+
+.contenedorContenidoPestaña{
+    margin: 180px auto;
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blanco);
+    text-align: justify;
+}
+
+.contenedorContenidoPestaña> button:first-of-type{
+    margin-bottom: 10px;
+}
+
+@media(min-width:900px){
+    .contenedorContenidoPestaña{
+        width: 30%;
+    }
+}
