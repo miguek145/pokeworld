@@ -327,8 +327,6 @@ header .submenu{
 
 }
 
-
-
 /*<--------------MAIN PÁG POKEMONS-------------->*/
 /*la pagina donde se encuentra el código es indexV.php*/
 
@@ -338,8 +336,9 @@ header .submenu{
     grid-template-columns:1fr;
     grid-auto-rows: 1fr;
     margin: auto;
-    width: 70%;
     gap: 15px;
+    width: 70%;
+    margin-bottom: 20px;
    
 }
 

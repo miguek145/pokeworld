@@ -6,7 +6,7 @@
         <?php
             if(isset($arrayDatosPokemons)){
                 if(is_array($arrayDatosPokemons)){
-                  
+                  echo "<h1 class='tituloPokemonFavoritos'>POKEMONS FAVORITIES</h1>";
                     for($conta=0;count($arrayDatosPokemons)>$conta;++$conta){
                     
                         // sustituimos el color de cada tarjeta de pokemon que obtenemeos de la base de datos por un color más claro
