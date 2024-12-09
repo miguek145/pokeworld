@@ -11,3 +11,6 @@
 
 ## Sobre el dominio
     - El dominio de mi aplicación web es https://pokeworld.cifpceuta.com/controller/indexController.php
+    
+## Cuando crees un comentario
+    -Tienes que recargar la página para que se visualice este en el hilo
