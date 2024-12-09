@@ -1,6 +1,6 @@
 
 
-<h2 class="tituloContenedorForo">THEMES</h2>
+<h1 class="tituloContenedorForo">THEMES</h1>
 
     <section class="contenedorHilosForo">
 

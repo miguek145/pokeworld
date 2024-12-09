@@ -12,7 +12,16 @@ menuHamburguesa[0].addEventListener("click", (ev) => {
 
     //para que no se paliquen a los elementos padres
     ev.stopPropagation();
-    barraNavegacion.classList.toggle("esconderBarraNavegacion");
+
+    if(!barraNavegacion.classList.contains("esconderBarraNavegacion2")){
+        barraNavegacion.classList.toggle("esconderBarraNavegacion");
+      
+    }else{
+        barraNavegacion.classList.remove("esconderBarraNavegacion2")
+        barraNavegacion.classList.add("esconderBarraNavegacion");
+      
+    }
+  
 
     barrasMenuhamburguesa[0].classList.toggle("linea1");
     barrasMenuhamburguesa[1].classList.toggle("linea2");
@@ -25,7 +34,7 @@ cuando se haga click sobre el documento pues que esta se esconda automáticament
 
 document.addEventListener("click",(ev)=>{
     if (window.innerWidth < 800) {
-        barraNavegacion.classList.add("esconderBarraNavegacion");
+        barraNavegacion.classList.add("esconderBarraNavegacion2");
             
         barrasMenuhamburguesa[0].classList.remove("linea1");
         barrasMenuhamburguesa[1].classList.remove("linea2");

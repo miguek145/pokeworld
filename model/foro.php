@@ -136,7 +136,7 @@
                 $conexionDB = ConexionDB::conectar();
 
                 //obtenemos el id del hilo para obtener los comentarios de este hilo
-                $consultaIdHilo=$conexionDB->query("SELECT idHilo FROM hilosForo WHERE nombreHilo='$nombreHilo'");
+                $consultaIdHilo=$conexionDB->query("SELECT idHilo FROM hilosforo WHERE nombreHilo='$nombreHilo'");
 
                 $arrayIdHilo=$consultaIdHilo->fetch(PDO::FETCH_ASSOC);
 
@@ -442,7 +442,7 @@
                                 $conexionDB->query("DELETE  FROM comentario  WHERE idComentario=$idComentario");
 
                                 // //conuslta apra obteener el id del hilo
-                                $consultaIdHilo=$conexionDB->query("SELECT idHilo FROM hilosForo WHERE nombreHilo='$nombreHilo'");
+                                $consultaIdHilo=$conexionDB->query("SELECT idHilo FROM hilosforo WHERE nombreHilo='$nombreHilo'");
 
                                 $arrayIdHilo=$consultaIdHilo->fetch(PDO::FETCH_ASSOC);
 
