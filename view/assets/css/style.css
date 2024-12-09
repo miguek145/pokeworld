@@ -272,7 +272,7 @@ header .submenu{
     header>div>img{
         order: 1;
         margin-right: 3px;
-        width: 5vw;
+        width: 4.5vw;
 
     }
 
@@ -302,7 +302,7 @@ header .submenu{
 
     header ul>li>a{
         padding:30px 20px;
-        font-size:1vw;
+        font-size:17pt;
 
     }
 
@@ -976,7 +976,7 @@ una clase porque así lo puedo identificar mejor en js (además que solamente ha
     /*el nombre de la aplicacion*/
     .contenedorLogin h2,.contenedorRegistro h2 {
         font-family: 'Pokemon Solid', sans-serif;
-        font-size: 10vw;
+        font-size: 5vw;
     }
 
     /*los titlos de los dos formularios, tanto del ogin como el de registro*/
@@ -1015,7 +1015,6 @@ una clase porque así lo puedo identificar mejor en js (además que solamente ha
         align-items: center;
         justify-content: center;
        
-
     }
 
     
@@ -1078,6 +1077,16 @@ una clase porque así lo puedo identificar mejor en js (además que solamente ha
             flex-direction: row;
            
           }
+
+        .contenedorLogin{
+            min-height: 700px;
+            margin-top: 90px;
+        }
+    
+        .contenedorRegistro{
+            margin-top: 70px;
+            min-height: 700px;
+        }
 
           .contenedorLogin>section>form,.contenedorRegistro>section>form{
             width: 50%;
