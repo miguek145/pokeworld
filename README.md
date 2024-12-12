@@ -14,3 +14,6 @@
     
 ## Cuando crees un comentario
     -Tienes que recargar la página para que se visualice este en el hilo
+
+## Sobre aceptar las cookies
+    - Para que se te almacene los nombres de pokemons en el buscador por nombres de pokemons en la página principal y para que se te creé el pokemon del día tienes que aceptar las cookies.
